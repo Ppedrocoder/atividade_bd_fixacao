@@ -13,3 +13,26 @@
 
 ## Fase 4 - CLI
 [CLI com comandos PostgreSQL](./CLI/cli.py)
+
+### Definir variáveis de ambiente
+$env:PGHOST="localhost"
+
+$env:PGDATABASE=""
+
+$env:PGUSER=""
+
+$env:PGPASSWORD=""
+
+$env:PGPORT="5432"
+
+ou
+
+setx PGHOST "localhost"
+
+setx PGDATABASE "biblioteca"
+
+setx PGUSER "postgres"
+
+setx PGPASSWORD "postgres"
+
+setx PGPORT "5432"

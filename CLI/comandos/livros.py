@@ -57,6 +57,34 @@ def disponiveis():
         print(r)
 
     conn.close()
+def indisponiveis():
+    conn = conectar()
+    cur = conn.cursor()
+
+    try:
+        cur.execute("""
+        SELECT l.id, l.titulo, l.genero
+        FROM livro l
+        JOIN emprestimo e ON l.id = e.id_livro
+        WHERE e.data_devolucao IS NULL;
+        """)
+
+        resultados = cur.fetchall()
+
+        if not resultados:
+            print("Nenhum livro indisponível.")
+            return
+
+        print("\nLivros indisponíveis:\n")
+
+        for r in resultados:
+            print(f"ID: {r[0]} | Título: {r[1]} | Gênero: {r[2]}")
+
+    except Exception as e:
+        print("Erro:", e)
+
+    finally:
+        conn.close()
 def sem_emprestimo():
     conn = conectar()
     cur = conn.cursor()

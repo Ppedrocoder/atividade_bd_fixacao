@@ -85,6 +85,9 @@ def executar_comando(cmd):
         case "multas:pagar":
             multas.pagar(args)
 
+        case "relatorios:indisponiveis":
+            livros.indisponiveis()
+
         case "help":
             mostrar_ajuda()
         

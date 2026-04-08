@@ -29,10 +29,10 @@ ou
 
 setx PGHOST "localhost"
 
-setx PGDATABASE "biblioteca"
+setx PGDATABASE ""
 
-setx PGUSER "postgres"
+setx PGUSER ""
 
-setx PGPASSWORD "postgres"
+setx PGPASSWORD ""
 
 setx PGPORT "5432"
